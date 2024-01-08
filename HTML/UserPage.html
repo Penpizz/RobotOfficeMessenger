@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/user.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<style>
+    * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  position: absolute;
+  width: 500px;
+  padding: 10px;
+  margin: auto;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+.btn {
+  
+  background-color: rgb(221, 237, 100);
+  color: rgb(0, 0, 0);
+  border: none;
+  transition:0.8s ease ;
+  cursor: pointer;
+}
+.btn-1 {
+  
+  background-color: rgb(224, 66, 132);
+  color: rgb(254, 254, 254);
+  border: none;
+  transition:0.8s ease ;
+  cursor: pointer;
+}
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1.5px solid rgb(178, 26, 26);
+}
+.text {
+  color: rgb(140, 102, 179);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.label {
+  font-size: 0.7em;
+  color: grey;
+}
+#del{
+  background-color:rgb(221, 255, 127);
+  margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 50%;
+    transition:0.8s ease ;
+  }
+  #edit{
+    background-color:rgb(221, 255, 127);
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 50%;
+    transition:0.8s ease ;
+}
+#edit:hover{
+  background-color:cornflowerblue;
+}
+#del:hover{
+  background-color: cornflowerblue;
+}
+#logo:hover{
+        background-color: hotpink;
+}
+#clk:hover{
+        background-color: rgb(76, 167, 64);
+}
+#sibtn:hover{
+      background-color: cornflowerblue;
+}
+
+.bx {
+  font-size: 32px; /* ปรับขนาดตามที่คุณต้องการ */
+}
+</style>
+</style>
+<body>
+      <!-- Logout -->
+      <div class="container" id="blur">
+        <div style="text-align: right">
+            <input type="button" value="logout" class="btn"  onclick="logout()" id="logo">
+            <a href="#" onclick="toggle()" class="btn-1" id="clk">click me</a>
+        </div>
+      <div class="background"></div>
+      <!-- Tap data -->
+        <div class="data-head">Robot Office Messenger <i class='bx bxs-bot' style='font-size:40px;color:#fdfbfb'  ></i></box-icon></div>
+        <div class="data-container">
+            <div class="data-item">
+              <h2>AP 1</h2>
+              <p class="value" id="one">22 dBm</p>
+            </div>
+            <div class="data-item">
+              <h2>AP 2</h2>
+              <p class="value" id="two">22 dBm</p>
+            </div>
+            <div class="data-item">
+              <h2>AP 3</h2>
+              <p class="value" id="three">22 dBm</p>
+            </div>
+            <div class="data-item">
+              <h2>AP 4</h2>
+              <p class="value" id="four">22 dBm</p>
+            </div>
+            <div class="data-item">
+              <h2>Azimuth</h2>
+              <p class="value" id="azimut">22.5&deg;</p>
+            </div>
+        </div>
+  <section class="section">
+      <!-- <h1>MAP</h1> -->
+      <div class="content">
+        <div class="left">
+          <div class="card">
+             <div class="room"> 
+                <!-- objects -->
+                <div class="wall-font-left" title="wall"></div>
+                <div class="wall-font-right" title="wall"></div>
+                <div class="wall-back-left" title="wall"></div>
+                <div class="wall-back-right" title="wall"></div>
+                <div class="wall-font-left-one" title="wall"></div>
+                <div class="wall-font-left-two" title="wall"></div>
+                <div class="wall-font-left-three" title="wall"></div>
+                <div class="wall-font-left-four" title="wall"></div>
+                <div class="wall-font-left-five" title="wall"></div>
+                <div class="wall-font-left-six" title="wall"></div>
+                <div class="wall-side-left" title="wall"></div>
+                <div class="wall-side-right" title="wall"></div>
+                <div class="door" title="door"></div>
+                <div class="table1" title="table"></div>
+                <div class="locker1" title="locker"></div>
+                <div class="locker2" title="locker"></div>
+                <div class="table2" title="table"></div>
+                <div class="table3" title="table"></div>
+                <div class="table4" title="table"></div>
+                <div class="table5" title="table"></div>
+                <div class="table6" title="table"></div>
+                <div class="table7" title="table"></div>
+                <div class="refrigerator" title="refrigerator"></div>
+                <div class="sink" title="sink"></div> 
+                <div class="cabinet1" title="cabinet"></div>   
+                <div class="cabinet2" title="cabinet"></div>   
+                <div class="cabinet3" title="cabinet"></div>   
+                <div class="cabinet4" title="cabinet"></div>   
+                <div class="cabinet5" title="cabinet"></div>   
+                <div class="cabinet6" title="cabinet"></div>   
+                <div class="cabinet7" title="cabinet"></div>   
+                <div class="cabinet8" title="cabinet"></div>   
+                <div class="cabinet9" title="table"></div>     
+                <div class="cabinet11" title="cabinet"></div>   
+                <div class="table8" title="tea table"></div>   
+                <div class="table9" title="table"></div>   
+                <div class="desk1" title="desk"></div>   
+                <div class="sofa1" title="sofa"></div>   
+                <div class="sofa2" title="sofa"></div>   
+                <div class="chair1" title="chair"></div>   
+                <div class="chair2" title="chair"></div>   
+                <div class="equipment" title="equipment"></div> 
+                <div class="box" title="box"></div>
+                <div class="box1" title="box"></div>
+                <div class="box2" title="box"></div>  
+                <!-- tile -->
+                <div id="tile-container"></div>
+                <div id="tile-container1"></div>
+                <div id="tile-container2"></div>
+                <div id="tile-container3"></div>
+                <div id="tile-container4"></div>
+                <div id="tile-container5"></div>
+                <div id="tile-container6"></div>
+                <div id="tile-container7"></div>
+                <!-- pos x = -4 -->
+                <div class="signal-point" id="signal-point" title="(-4,3)"></div>
+                <div class="signal-point1" id="signal-point1" title="(-4,2)"></div>
+                <div class="signal-point2" id="signal-point2" title="(-4,1)"></div>
+                <div class="signal-point3" id="signal-point3" title="(-4,0)"></div>
+                <div class="signal-point4" id="signal-point4" title="(-4,4)"></div>
+                <div class="signal-point5" id="signal-point5" title="(-4,5)"></div>
+                <div class="signal-point6" id="signal-point6" title="(-4,6)"></div>
+                <div class="signal-point7" id="signal-point7" title="(-4,7)"></div>
+                <div class="signal-point8" id="signal-point8" title="(-4,8)"></div>
+                <!-- pos x = -5 -->
+                <div class="signal-point9" id="signal-point9" title="(-5,3)"></div>
+                <div class="signal-point10" id="signal-point10" title="(-5,2)"></div>
+                <div class="signal-point11" id="signal-point11" title="(-5,1)"></div>
+                <div class="signal-point12" id="signal-point12" title="(-5,0)"></div>
+                <div class="signal-point13" id="signal-point13" title="(-5,4)"></div>
+                <div class="signal-point14" id="signal-point14" title="(-5,5)"></div>
+                <div class="signal-point15" id="signal-point15" title="(-5,6)"></div>
+                <div class="signal-point16" id="signal-point16" title="(-5,7)"></div>
+                <div class="signal-point17" id="signal-point17" title="(-5,8)"></div>
+                <!-- pos x = -3 -->
+                <div class="signal-point18" id="signal-point18" title="(-3,3)"></div>
+                <div class="signal-point19" id="signal-point19" title="(-3,2)"></div>
+                <div class="signal-point20" id="signal-point20" title="(-3,1)"></div>
+                <div class="signal-point21" id="signal-point21" title="(-3,0)"></div>
+                <div class="signal-point22" id="signal-point22" title="(-3,4)"></div>
+                <div class="signal-point23" id="signal-point23" title="(-3,5)"></div>
+                <div class="signal-point24" id="signal-point24" title="(-3,6)"></div>
+                <div class="signal-point25" id="signal-point25" title="(-3,7)"></div>
+                <div class="signal-point26" id="signal-point26" title="(-3,8)"></div>
+                <!-- pos x = -2 -->
+                <div class="signal-point27" id="signal-point27" title="(-2,2)"></div>
+                <div class="signal-point28" id="signal-point28" title="(-2,1)"></div>
+                <div class="signal-point29" id="signal-point29" title="(-2,0)"></div>
+                <!-- pos x = -1 -->
+                <div class="signal-point30" id="signal-point30" title="(-1,2)"></div>
+                <div class="signal-point31" id="signal-point31" title="(-1,1)"></div>
+                <div class="signal-point32" id="signal-point32" title="(-1,0)"></div>
+                <!-- pos x = 0 -->
+                <div class="signal-point33" id="signal-point33" title="(0,2)"></div>
+                <div class="signal-point34" id="signal-point34" title="(0,1)"></div>
+                <div class="signal-point35" id="signal-point35" title="(0,0)"></div>
+                <!-- pos x = 1 -->
+                <div class="signal-point36" id="signal-point36" title="(1,2)"></div>
+                <div class="signal-point37" id="signal-point37" title="(1,1)"></div>
+                <div class="signal-point38" id="signal-point38" title="(1,0)"></div>
+                <!-- pos x = 2 -->
+                <div class="signal-point39" id="signal-point39" title="(2,2)"></div>
+                <div class="signal-point40" id="signal-point40" title="(2,1)"></div>
+                <div class="signal-point41" id="signal-point41" title="(2,0)"></div>
+                <!-- pos x = 3 -->
+                <div class="signal-point42" id="signal-point42" title="(3,2)"></div>
+                <div class="signal-point43" id="signal-point43" title="(3,1)"></div>
+                <div class="signal-point44" id="signal-point44" title="(3,0)"></div>
+                <div class="signal-point45" id="signal-point45" title="(3,-1)"></div>
+                <div class="signal-point46" id="signal-point46" title="(3,-2)"></div>
+                <!-- pos x = 4 -->
+                <div class="signal-point47" id="signal-point47" title="(4,2)"></div>
+                <div class="signal-point48" id="signal-point48" title="(4,1)"></div>
+                <div class="signal-point49" id="signal-point49" title="(4,0)"></div>
+                <div class="signal-point50" id="signal-point50" title="(4,-1)"></div>
+                <div class="signal-point51" id="signal-point51" title="(4,-2)"></div>
+                <!-- pos x = 5 -->
+                <div class="signal-point52" id="signal-point52" title="(5,2)"></div>
+                <div class="signal-point53" id="signal-point53" title="(5,1)"></div>
+                <div class="signal-point54" id="signal-point54" title="(5,0)"></div>
+                <div class="signal-point55" id="signal-point55" title="(5,-1)"></div>
+                <div class="signal-point56" id="signal-point56" title="(5,-2)"></div>
+                <!-- pos x = 6 -->
+                <div class="signal-point57" id="signal-point57" title="(6,2)"></div>
+                <div class="signal-point58" id="signal-point58" title="(6,1)"></div>
+                <div class="signal-point59" id="signal-point59" title="(6,0)"></div>
+                <div class="signal-point60" id="signal-point60" title="(6,-1)"></div>
+                <div class="signal-point61" id="signal-point61" title="(6,-2)"></div>
+                <!-- pos x = 7 -->
+                <div class="signal-point62" id="signal-point62" title="(7,2)"></div>
+                <div class="signal-point63" id="signal-point63" title="(7,1)"></div>
+                <div class="signal-point64" id="signal-point64" title="(7,0)"></div>
+                <!-- pos x = 8 -->
+                <div class="signal-point65" id="signal-point65" title="(8,2)"></div>
+                <div class="signal-point66" id="signal-point66" title="(8,1)"></div>
+                <div class="signal-point67" id="signal-point67" title="(8,0)"></div>
+                <!-- pos x = 9 -->
+                <div class="signal-point68" id="signal-point68" title="(9,2)"></div>
+                <div class="signal-point69" id="signal-point67" title="(9,1)"></div>
+                <div class="signal-point70" id="signal-point70" title="(9,0)"></div>
+                <!-- pos x = -6 -->
+                <div class="signal-point71" id="signal-point71" title="(-6,8)"></div>
+                <div class="signal-point72" id="signal-point72" title="(-6,7)"></div>
+                <div class="signal-point73" id="signal-point73" title="(-6,6)"></div>
+                <div class="signal-point74" id="signal-point74" title="(-6,5)"></div>
+                <div class="signal-point75" id="signal-point75" title="(-6,4)"></div>
+                <div class="signal-point76" id="signal-point76" title="(-6,3)"></div>
+                <div class="signal-point77" id="signal-point77" title="(-6,2)"></div>
+                <div class="signal-point78" id="signal-point78" title="(-6,1)"></div>
+                <div class="signal-point79" id="signal-point79" title="(-6,0)"></div>
+                <div class="signal-point80" id="signal-point80" title="(-6,-1)"></div>
+                <div class="signal-point81" id="signal-point81" title="(-6,-2)"></div>
+                <div class="signal-point82" id="signal-point82" title="(-6,-3)"></div>
+                <div class="signal-point83" id="signal-point83" title="(-6,-4)"></div>
+                <div class="signal-point84" id="signal-point84" title="(-6,-5)"></div>
+                <div class="signal-point85" id="signal-point85" title="(-6,-6)"></div>
+                <div class="signal-point86" id="signal-point86" title="(-6,-7)"></div>
+                <div class="signal-point87" id="signal-point87" title="(-6,-8)"></div>
+                <div class="signal-point88" id="signal-point88" title="(-6,-9)"></div>
+                <div class="signal-point89" id="signal-point89" title="(-6,-10)"></div>
+                <div class="signal-point90" id="signal-point90" title="(-6,-11)"></div>
+                <div class="signal-point91" id="signal-point91" title="(-6,-12)"></div>
+                <div class="signal-point92" id="signal-point92" title="(-6,-13)"></div>
+                <div class="signal-point93" id="signal-point93" title="(-6,-14)"></div>
+                <div class="signal-point94" id="signal-point94" title="(-6,-15)"></div>
+                <!-- pos x = -7 -->
+                <div class="signal-point95" id="signal-point95" title="(-7,8)"></div>
+                <div class="signal-point96" id="signal-point96" title="(-7,7)"></div>
+                <div class="signal-point97" id="signal-point97" title="(-7,6)"></div>
+                <div class="signal-point98" id="signal-point98" title="(-7,5)"></div>
+                <div class="signal-point99" id="signal-point99" title="(-7,4)"></div>
+                <div class="signal-point100" id="signal-point100" title="(-7,3)"></div>
+                <div class="signal-point101" id="signal-point101" title="(-7,2)"></div>
+                <div class="signal-point102" id="signal-point102" title="(-7,1)"></div>
+                <div class="signal-point103" id="signal-point103" title="(-7,0)"></div>
+                <div class="signal-point104" id="signal-point104" title="(-7,-1)"></div>
+                <div class="signal-point105" id="signal-point105" title="(-7,-2)"></div>
+                <div class="signal-point106" id="signal-point106" title="(-7,-3)"></div>
+                <div class="signal-point107" id="signal-point107" title="(-7,-4)"></div>
+                <div class="signal-point108" id="signal-point108" title="(-7,-5)"></div>
+                <div class="signal-point109" id="signal-point109" title="(-7,-6)"></div>
+                <div class="signal-point110" id="signal-point110" title="(-7,-7)"></div>
+                <div class="signal-point111" id="signal-point111" title="(-7,-8)"></div>
+                <div class="signal-point112" id="signal-point112" title="(-7,-9)"></div>
+                <div class="signal-point113" id="signal-point113" title="(-7,-10)"></div>
+                <div class="signal-point114" id="signal-point114" title="(-7,-11)"></div>
+                <div class="signal-point115" id="signal-point115" title="(-7,-12)"></div>
+                <div class="signal-point116" id="signal-point116" title="(-7,-13)"></div>
+                <div class="signal-point117" id="signal-point117" title="(-7,-14)"></div>
+                <div class="signal-point118" id="signal-point118" title="(-7,-15)"></div>
+                <!-- pos x = -8 -->
+                <div class="signal-point119" id="signal-point119" title="(-8,8)"></div>
+                <div class="signal-point120" id="signal-point120" title="(-8,7)"></div>
+                <div class="signal-point121" id="signal-point121" title="(-8,6)"></div>
+                <div class="signal-point122" id="signal-point122" title="(-8,5)"></div>
+                <div class="signal-point123" id="signal-point123" title="(-8,4)"></div>
+                <div class="signal-point124" id="signal-point124" title="(-8,3)"></div>
+                <div class="signal-point125" id="signal-point125" title="(-8,2)"></div>
+                <div class="signal-point126" id="signal-point126" title="(-8,1)"></div>
+                <div class="signal-point127" id="signal-point127" title="(-8,0)"></div>
+                <div class="signal-point128" id="signal-point128" title="(-8,-1)"></div>
+                <div class="signal-point129" id="signal-point129" title="(-8,-2)"></div>
+                <div class="signal-point130" id="signal-point130" title="(-8,-3)"></div>
+                <div class="signal-point131" id="signal-point131" title="(-8,-4)"></div>
+                <div class="signal-point132" id="signal-point132" title="(-8,-5)"></div>
+                <div class="signal-point133" id="signal-point133" title="(-8,-6)"></div>
+                <div class="signal-point134" id="signal-point134" title="(-8,-7)"></div>
+                <div class="signal-point135" id="signal-point135" title="(-8,-8)"></div>
+                <div class="signal-point136" id="signal-point136" title="(-8,-9)"></div>
+                <div class="signal-point137" id="signal-point137" title="(-8,-10)"></div>
+                <div class="signal-point138" id="signal-point138" title="(-8,-11)"></div>
+                <div class="signal-point139" id="signal-point139" title="(-8,-12)"></div>
+                <div class="signal-point140" id="signal-point140" title="(-8,-13)"></div>
+                <div class="signal-point141" id="signal-point141" title="(-8,-14)"></div>
+                <div class="signal-point142" id="signal-point142" title="(-8,-15)"></div>
+                <!-- pos x = -8 -->
+                <div class="signal-point143" id="signal-point143" title="(-9,8)"></div>
+                <div class="signal-point144" id="signal-point144" title="(-9,7)"></div>
+                <div class="signal-point145" id="signal-point145" title="(-9,6)"></div>
+                <div class="signal-point146" id="signal-point146" title="(-9,5)"></div>
+                <div class="signal-point147" id="signal-point147" title="(-9,4)"></div>
+                <div class="signal-point148" id="signal-point148" title="(-9,3)"></div>
+                <!-- compass -->
+                <div class="compass-container">
+                  <div class="compass">
+                    <svg  class="moved-svg" width="150" height="150"  viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+                      <!-- สร้างข้อความ "Hello, SVG!" ที่ตำแหน่ง (10, 40) และใช้ font-size เท่ากับ 16 -->
+                      <text x="62" y="15" font-size="12" text-anchor="middle" fill="black">F</text>
+                      <text x="10" y="70" font-size="12" text-anchor="middle" fill="black">L</text>
+                      <text x="62" y="121" font-size="12" text-anchor="middle" fill="black">B</text>
+                      <text x="112" y="70" font-size="12" text-anchor="middle" fill="black">R</text>
+                    </svg>
+                    <svg  class="moved-svg" width="150" height="150"  viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+                      <!-- สร้างข้อความ "Hello, SVG!" ที่ตำแหน่ง (10, 40) และใช้ font-size เท่ากับ 16 -->
+                      <text x="61" y="15" font-size="12" text-anchor="middle" fill="black">F is font</text>
+                      <text x="58" y="35" font-size="12" text-anchor="middle" fill="black">L is left</text>
+                      <text x="63" y="55" font-size="12" text-anchor="middle" fill="black">B is back</text>
+                      <text x="63" y="75" font-size="12" text-anchor="middle" fill="black">R is right</text>
+                    </svg>
+                    <div class="needle" id="needle"></div>
+                    <div class="cir"></div>
+                  </div>
+                </div>
+                <!-- test compass -->
+                <!-- <div class="container">
+    
+                  <div class="compass">
+              
+                    <div id="rose" class="compass__rose">
+              
+                      <svg class="compass__rose__dial" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              
+                        <circle cx="65" cy="65" r="56" stroke="white" stroke-width="1" fill="none" />
+                        <polyline points="63,9  67,9  65,15" fill="white"/>
+                        <polyline points="121,63  121,67  115,65" fill="white"/>
+                        <polyline points="63,121  67,121  65,115" fill="white"/>
+                        <polyline points="9,63  9,67  15,65" fill="white"/>
+              
+                        <text x="65" y="6.5" font-size="7" text-anchor="middle" fill="white">N</text>
+                        <text x="125" y="67" font-size="7" text-anchor="middle" fill="white">E</text>
+                        <text x="65" y="128" font-size="7" text-anchor="middle" fill="white">S</text>
+                        <text x="4.1" y="67.5" font-size="7" text-anchor="middle" fill="white">W</text>
+              
+                      </svg>
+                
+                    </div>
+                  
+                  
+                    <svg class="compass__pointer" viewBox="0 0 130 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              
+                      <polyline points="60,60  70,60  65,15" fill="#b60000"/>
+                      <polyline points="60,70  70,70  65,115" fill="white"/>
+                      <circle cx="65" cy="65" r="7" stroke="#b60000" stroke-width="7" fill="none" />
+              
+                    </svg>
+              
+                  </div>
+              
+              
+              
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="card">
+            <div class="data-item">
+              <h2>Position</h2>
+              <p class="value" id="pos">(x,y)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="data-item">
+              <h2>Direction</h2>
+              <p class="value" id="Direc">N</p>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="data-item">
+              <h2>Direction</h2>
+              <p class="value" id="Direc">N</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+  </section>
+</div>
+<div id="popup">
+  <h2>Please click your location <i class='bx bxs-been-here bx-tada'  style='color:#ff0000' ></i></h2>
+  <p>กรุณาเลือกตำแหน่งที่ต้องการให้หุ่นยนต์เดินทางรับหรือส่งเอกสาร</p>
+<div class="flex-test">
+  <!-- <a href="#" onclick="sendLineNotify()" class="flex-item item-1">Target A</a> -->
+  <a href="#" onclick="showMessageBox()" class="flex-item item-1">Target A</a>
+  <a href="#" class="flex-item item-2">Target B</a>
+  <a href="#" class="flex-item item-3">Target C</a>
+  <a href="#" class="flex-item item-4">Target D</a>
+  <a href="#" class="flex-item item-5">Target E</a>
+  <a href="#" class="flex-item item-6">Station</a>
+</div>
+  <a href="#" onclick="toggle()" class="btn-2" id="btn-2" >close</a>
+</div>
+      
+</body>
+<script src="/JAVASCRIPT/user.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase.js"></script>
+<script type="text/javascript">
+    function toggle(){
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active')
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('active')    
+}
+
+
+    function showMessageBox() {
+        // ดึงตัวแสดงข้อความด้วย ID ของ div
+        // กำหนดข้อความที่ต้องการแสดง
+        var message = "Hello, this is a message!";
+        // แสดงข้อความในตัวแสดงข้อความ
+        console.log(message);
+    }
+//request location
+    // function sendLineNotify() {
+    //         var accessToken = "ClzyaFDd6Yqr9z3JN6kk2vBPXXn966rO2nBM2zzyScm";  // แทนที่ YOUR_ACCESS_TOKEN ด้วย Access Token ที่ได้จาก Line Notify
+
+    //         var message = "Target A";
+
+    //         var xhr = new XMLHttpRequest();
+    //         var url = "https://notify-api.line.me/api/notify";
+    //         xhr.open("POST", url, true);
+    //         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    //         xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
+
+    //         xhr.onreadystatechange = function () {
+    //             if (xhr.readyState == 4 && xhr.status == 200) {
+    //                 // การทำงานเมื่อรับ response จาก Line Notify API
+    //                 console.log(xhr.responseText);
+    //             }
+    //         }
+
+    //         var params = "message=" + encodeURIComponent(message);
+    //         xhr.send(params);
+    //     }
+</script>
+</html>
