@@ -1,0 +1,2203 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: #020410;
+    height: 100%;
+}
+.container{
+    justify-content: center;   
+} 
+.container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.flex-test{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+    margin-top: 30px;
+}
+.item-1{
+    position: relative;
+    padding: 30px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #8d67d8;
+}
+.item-2{
+    position: relative;
+    padding: 30px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #479175;
+}
+.item-3{
+    position: relative;
+    padding: 30px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #8fa066;
+}
+.item-4{
+    position: relative;
+    padding: 30px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #812a93;
+}
+.item-5{
+    position: relative;
+    padding: 30px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #b79c26;
+}
+.item-6{
+    position: relative;
+    padding: 30px 46px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #c85d1f;
+}
+.btn-2{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 270px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #060508;
+} 
+#btn-2:hover{
+    background-color: rgba(102, 99, 99, 1);
+}
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 400px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.35);
+    background: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 2%;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('/img/AI-GIANT-ROBOT-1102023.png') no-repeat;
+    background-size: cover;
+    background-position: center ;
+    filter: blur(12px);
+}
+.data-container{
+    display: flex;
+    position: absolute;
+    color: #f0f0f0;
+    top: 19%;
+    left:20%;
+    justify-content: space-between;
+    width: 918px;
+    margin: 18px auto ;
+    padding: 25px;
+    background: rgba(115, 53, 28, 0.5);
+    box-shadow: 0 2px 15px rgba(0,0,0,2);
+    border-radius: 10px;
+}
+.data-item{
+    text-align: center;    
+}
+.data-item h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.data-item p{
+    
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    width: 100%;
+    margin: 3% auto;
+    padding: 4px;
+    border-radius: 5px;
+}
+.data-head{
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    margin: auto;
+    width: 64%;
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 5px auto;
+    padding: 10px;
+    background: rgba(115, 53, 28, 0.5);
+    box-shadow: 0 2px 15px rgba(0,0,0,2);
+    border-radius: 20px;
+}
+.section{
+    position: absolute;
+    float: left;
+    /* background:transparent; */
+    width: 100%;
+    /* background-color: aliceblue; */
+    text-align: center;
+    padding: 50px 15px;
+    top: 32%;
+}
+.section .content{
+    float: left;
+    width: 95%;
+    margin-top: 20px;
+}
+.section .content .left {
+    width: 60%;
+    float: left;
+    padding: 0px 10px;
+
+} 
+.section .content .left .card {
+    padding: 220px 100px;
+    font-size: 30px;
+    color: #f0f0f0;
+    background-color: #060508;
+    border-radius: 5px;   
+} 
+.section .content .right {
+    width: 30%;
+    float: right;
+    padding: 0px 50px;
+    top: 0%;
+} 
+.section .content .right .card{
+    padding: 40px 73px;
+    font-size: 30px;
+    color: #f0f0f0;
+    background: rgba(115, 53, 28, 0.5);
+    /* background-color: #838c94; */
+    margin-bottom: 50px;
+    border-radius: 5px;
+} 
+.room {
+    position: absolute;
+    width: 800px; /* ปรับความกว้างเป็น 768 พิกเซล */
+    height: 410px; /* ปรับความสูงเป็น 685.5 พิกเซล */
+    background-color: #ffffff;
+    border: 2px solid #333;
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+    /* position: relative; */
+    top: 14%;
+    left: 3%; /* ตำแหน่งด้านซ้ายของห้อง (50% ของความกว้าง) */
+}
+.wall-font-left{
+    width: 10px;
+    height: 161.5px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 71.3%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 76.8%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-back-left{
+    width: 10px;
+    height: 164.5px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 71.35%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 22.7%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-right{
+    width: 10px;
+    height: 161.5px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 26.8%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 76.8%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-back-right{
+    width: 10px;
+    height: 164.5px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 26.8%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 22.7%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-left-one{
+    width: 28.75px;
+    height: 19.75px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 49.1%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 75.64%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-left-two{
+    width: 28.75px;
+    height: 17.75px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 5.9%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 75.64%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-left-three{
+    width: 28.75px;
+    height: 17.75px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 93.35%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 75.64%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-left-four{
+    width: 28.75px;
+    height: 17.75px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 93.35%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 23.85%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-left-five{
+    width: 28.75px;
+    height: 19.75px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 49.1%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 23.85%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-font-left-six{
+    width: 28.75px;
+    height: 17.75px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 5.9%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 23.85%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-side-left{
+    width: 384px;
+    height: 10px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 94.275%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 49.75%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.wall-side-right{
+    width: 384px;
+    height: 10px;
+    background-color: #333435; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 5%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 49.75%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.door{
+    width: 10px;
+    height: 84.75px;
+    background-color: #d2962d; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 71.3%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 76.8%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table1{
+    width: 90px;
+    height: 40px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 53%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 68.2%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.locker1{
+    width: 90px;
+    height: 30px;
+    background-color: #b6b5b3; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 89.3%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 68.2%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table2{
+    width: 90px;
+    height: 40px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 87.999%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 56.9%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table3{
+    width: 90px;
+    height: 40px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 87.999%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 45.6%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.refrigerator{
+    width: 25.2px;
+    height: 36.75px;
+    background-color: #3890cf; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 88.5%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 38.35%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table4{
+    width: 90px;
+    height: 40px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 87.999%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 31.2%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.sink{
+    width: 16.5px;
+    height: 24.85px;
+    background-color: #24e575; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 86.2%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 24.4%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.locker2{
+    width: 26px;
+    height: 66.5px;
+    background-color: #b6b5b3; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 59.9%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 24.9%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table5{
+    width: 15px;
+    height: 50px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 75%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 24.3%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet1{
+    width: 180px;
+    height: 20.25px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 54.2%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 37.8%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table6{
+    width: 90px;
+    height: 40px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 61.75%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 32.2%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table7{
+    width: 90px;
+    height: 40px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 61.75%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 43.5%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.equipment{
+    width: 52.5px;
+    height: 75.5px;
+    background-color: #4b4130; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 57.3%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 52.45%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.box{
+    width: 23px;
+    height: 19.75px;
+    background-color: #dcbc85; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 49.1%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 47.7%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+
+}
+.cabinet2{
+    width: 163px;
+    height: 20.25px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 49.1%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 36%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet3{
+    width: 46px;
+    height: 28px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 9.7%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 70.9%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet4{
+    width: 46px;
+    height: 28px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 9.7%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 65.2%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet5{
+    width: 90px;
+    height: 20px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 8.5%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 56.4%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet6{
+    width: 90px;
+    height: 27.75px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 9.7%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 45.01%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet7{
+    width: 75px;
+    height: 27.75px;
+    background-color: #3a4941; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 9.7%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 34.6%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet8{
+    width: 49px;
+    height: 20.25px;
+    background-color: #1fd072; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 10.5%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 26.5%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet9{
+    width: 89.75px;
+    height: 60px;
+    background-color: #1fd072; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 27%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 68.5%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+    border-radius: 10px;
+}
+.chair1{
+    width: 35px;
+    height: 34px;
+    background-color: #2a02f1; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 17.5%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 51%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.cabinet11{ 
+    width: 37.5px;
+    height: 26.5px;
+    background-color: #0494ed; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 17%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 47%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.sofa1{ 
+    width: 37.5px;
+    height: 67.5px;
+    background-color: #468840; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 31%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 48%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.sofa2{ 
+    width: 67.5px;
+    height: 37.5px;
+    background-color: #468840; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 18%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 40.5%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table8{ 
+    width: 45px;
+    height: 30px;
+    background-color: #468840; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 32%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 40%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.desk1{ 
+    width: 60px;
+    height: 40px;
+    background-color: #413c79; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 32%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 32.25%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.table9{
+    width: 40px;
+    height: 90px;
+    background-color: #a58651; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 25%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 26%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.chair2{
+    width: 30px;
+    height: 15px;
+    background-color: #2a02f1; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 24%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 31%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.box1{
+    width: 40px;
+    height: 19.75px;
+    background-color: #dcbc85; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 44%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 44%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.box2{
+    width: 90px;
+    height: 30px;
+    background-color: #dcbc85; /* สีน้ำเงิน */
+    position: absolute; /* ตั้งค่าเพื่อให้สามารถกำหนดตำแหน่ง */
+    top: 43%; /* ตำแหน่งด้านบนของห้อง (50% ของความสูง) */
+    right: 34%; /* ตำแหน่งด้านขวาของห้อง (5% ของความกว้าง) */
+    transform: translate(50%, -50%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container {
+    width: 90px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(234.5%, 240%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile1 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container1{
+    width: 50px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(589%, 168.1%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile2 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container2{
+    width: 100px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(344%, 320%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container3{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile3 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container3{
+    width: 100px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(444.3%, 220%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container4{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile4 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container4{
+    width: 50px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(1088%, 120%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container5{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile5 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container5{
+    width: 45px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(691%, -123%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container6{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile6 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container6{
+    width: 45px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(764%, -752%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+#tile-container7{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile7 {
+    width: 15px;
+    height: 15px;
+    /* margin: 1px; */
+    background-color: #ffffff;
+    border: 1px solid #000; /* เพิ่มขอบดำ 1px */
+
+}
+#tile-container7{
+    width: 45px; /* (30px + 1px) * 5 + 1px */
+    transform: translate(692%, -2850%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point1 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point2 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point3 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point4 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point5 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point6 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point7 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point8 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -3715%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point9 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point10 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point11 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point12 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point13 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point14 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point15 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point16 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point17 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -3500%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point18 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point19 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point20 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point21 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point22 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point23 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point24 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point25 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point26 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -3920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point27 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -4140%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point28 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -4140%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point29 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -4135%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point30 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -4375%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point31 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -4375%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point32 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -4375%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point33 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -4600%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point34 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -4600%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point35 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -4600%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point36 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -4820%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point37 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -4820%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point38 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -4820%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point39 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -5040%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point40 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -5040%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point41 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -5040%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point42 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -5260%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point43 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -5260%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point44 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -5260%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point45 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4770%, -5260%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point46 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4980%, -5260%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point47 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -5480%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point48 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -5480%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point49 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -5480%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point50 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4770%, -5480%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point51 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4980%, -5480%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point52 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -5700%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point53 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -5700%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point54 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -5700%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point55 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4770%, -5700%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point56 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4980%, -5700%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point57 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -5920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point58 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -5920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point59 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -5920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point60 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4770%, -5920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point61 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4980%, -5920%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point62 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -6140%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point63 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -6140%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point64 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -6140%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point65 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -6360%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point66 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -6360%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point67 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -6360%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point68 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%,  -6580%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point69 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%,  -6580%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point70 {
+    width: 7.5px;
+    height: 7.5px;
+     /* สีของจุดสัญญาณ */
+    background-color: rgba(255, 0, 0, 1); /* สีแดงที่มีความโปร่งแสงเป็น 50% */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -6580%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point71 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point72 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point73 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point74 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point75 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point76 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point77 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point78 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point79 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point80 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4771%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point81 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4995%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point82 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5219%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point83 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5435%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point84 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5655%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point85 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5880%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point86 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6105%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point87 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6328%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point88 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6555%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point89 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6770%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point90 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6990%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point91 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7200%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point92 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7430%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point93 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7663%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point94 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7875%, -3280%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point95 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point96 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point97 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point98 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point99 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point100 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point101 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point102 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point103 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point104 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4771%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point105 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4995%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point106 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5219%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point107 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5435%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point108 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5655%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point109 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5880%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point110 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6105%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point111 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6328%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point112 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6555%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point113 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6770%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point114 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6990%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point115 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7200%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point116 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7430%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point117 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7663%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point118 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7875%, -3060%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point119 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point120 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point121 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point122 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point123 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point124 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point125 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4099%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point126 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4323%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point127 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4547%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point128 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4771%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point129 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(4995%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point130 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5219%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point131 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5435%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point132 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5655%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point133 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(5880%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point134 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6105%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point135 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6328%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point136 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6555%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point137 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6770%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point138 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(6990%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point139 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7200%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point140 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7430%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point141 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7663%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point142 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(7875%, -2840%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point143 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2765%, -2620%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point144 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(2979%, -2620%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point145 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3203%, -2620%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point146 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3427%, -2620%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point147 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3651%, -2620%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.signal-point148 {
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgba(255, 0, 0, 1); /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* เพื่อให้การเคลื่อนที่มีการแสดงผลเป็นอย่างน้อย */
+    transform: translate(3875%, -2620%); /* ให้เก้าอี้อยู่ตรงกลางของห้อง */
+}
+.compass-container {
+    position: relative;
+  }
+  .compass {
+    width: 100px;
+    height: 100px;
+    background-color: #38cef8;
+    border-radius: 50%;
+    position: relative;
+    transform: translate(40.2%, -490%);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.35);
+  }
+  .needle {
+    position: absolute;
+    top: 5%;
+    left: 49%;
+    /* transform: translate(-50%, -30%) rotate(180deg); */
+    width: 5px;
+    height: 43px;
+    background-color: #e24d4d;
+    transform-origin: 50% 100%;
+    /* transition: transform 0.5s ease-in-out; */
+    
+}  
+.needle::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #e24d4d;
+    top: -5px;
+    left: 71%;
+    transform: translateX(-60%);
+}
+.cir{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff; /* สีของจุดสัญญาณ */
+    border-radius: 50%;
+    top: 43%;
+    left: 52%;
+    transform: translateX(-60%);
+}
+.moved-svg {
+    transform: translate(-21px, -23px); /* เลื่อน SVG ไปที่ตำแหน่ง (50px, 20px) */
+  }
+/* 
+.compass__rose {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+}*/
+  
+/*.compass__pointer {
+      height: 100%;
+      width: 100%;
+} */
+a{
+    position: relative;
+    padding: 10px 10px;
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    top: 8%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1em;
+    border-radius: 10px;
+}
